@@ -14,7 +14,7 @@ def take_a_number(katz_deli, name_end)
   puts "Welcome, #{name_end}. You are number #{katz_deli[0]+1} in line."
  end
 =end
- katz_deli =[]
+ katz_deli = ["Ada", "Kent", "Grace"]
  def line(katz_deli)
   if katz_deli.empty?
     puts "The line is currently empty."
@@ -23,16 +23,16 @@ def take_a_number(katz_deli, name_end)
     katz_deli.each.with_index(1) do |person, i|
       current_line << " #{i}. #{person}"
     end
-    puts current_line
+    return current_line
   end
 end
 line(katz_deli)
 
 def take_a_number(katz_deli, name)
   katz_deli << name
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+  return "Welcome, #{name}. You are number #{katz_deli.length} in line."
 end
-take_a_number(katz_deli, name)
+take_a_number(katz_deli, "Matz")
 
 def now_serving(katz_deli)
   if katz_deli.empty?
